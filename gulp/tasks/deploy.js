@@ -5,7 +5,7 @@ var config = require('../config').build;
 
 
 
-gulp.task('deploy',['build'], function() {
+gulp.task('deploy',['build', 'present'], function() {
   gulp.src(config.dest)
     .pipe(rsync({
       root: config.dest,
